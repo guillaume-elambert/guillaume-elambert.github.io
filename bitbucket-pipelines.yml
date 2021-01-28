@@ -1,0 +1,18 @@
+image: node:15.5.0
+
+pipelines:
+  branches:
+    master:
+      - step:
+          script:
+            - export COMMIT_MESSAGE=$(git log --format=%B -n 1 ${BITBUCKET_COMMIT})
+            - npm install
+            - npm run build 
+            - git config --global user.name bitbucket-pipelines
+            - git config --global user.email commits-noreply@bitbucket.org
+            - git clone git@bitbucket.org:${BITBUCKET_WORKSPACE}/${BITBUCKET_WORKSPACE}.bitbucket.io.git
+            - cp -r build/* ${BITBUCKET_WORKSPACE}.bitbucket.io/
+            - cd ${BITBUCKET_WORKSPACE}.bitbucket.io
+            - git add .
+            - git commit -m "$COMMIT_MESSAGE"
+            - git push origin master --force
