@@ -1,6 +1,6 @@
 import React from 'react';
 
-function About(props){
+export function About(props){
     return (
         <p>À propos de moi</p>
     );

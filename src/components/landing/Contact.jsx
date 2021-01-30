@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Contact(props){
+export function Contact(props){
     return (
         <p>Me contacter</p>
     );
