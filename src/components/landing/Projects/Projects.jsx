@@ -8,6 +8,7 @@ import Fork from '../../common/Icons/Fork';
 import { githubToken } from '../../../data/config';
 
 import { AwesomeButton } from "react-awesome-button";
+import LoadingScreen from '../../common/LoadingScreen/LoadingScreen';
 
 
 export function Projects() {
@@ -46,63 +47,67 @@ export function Projects() {
 
             const graphQLClient = new GraphQLClient(endpoint, {
                 headers: {
-                    authorization: "Bearer "+githubToken,
+                    authorization: "Bearer " + atob(githubToken),
                 },
             });
 
             await graphQLClient.request(query).then(data => {
-                if(!edges){
+                if (!edges) {
                     setEdges(data.viewer.repositories.edges);
                 }
             });
         }
     }
-    
-    
 
-    if(!edges) graphQLQuery();
+
+
+    if (!edges) graphQLQuery();
 
     return (
 
-        <div id="projects" className="section mt-1">
+        <div id="projects" className="section mt-5">
             <h2 className="mb-5 font-weight-bolder title">Projects</h2>
-            <Grid>
-                {
-                    edges ? edges.map(({ node }) => (
+
+            {
+                edges ? <Grid> {
+                    edges.map(({ node }) => (
+
                         <AwesomeButton type="primary" className="projectTiles" key={node.id} as="a" href={node.url} target="_blank" rel="noopener noreferrer">
-                                <Card>
-                                    <Content>
-                                        <h4>{node.name}</h4>
-                                        <p>{node.description}</p>
-                                    </Content>
-                                    <TitleWrap>
-                                        <Stats>
-                                            <div>
-                                                <Star color={"#fff"} />
-                                                <span>{node.stargazers.totalCount}</span>
-                                            </div>
-                                            <div>
-                                                <Fork color={"#fff"} />
-                                                <span>{node.forkCount}</span>
-                                            </div>
-                                        </Stats>
-                                        <Stats>
-                                            <Languages>
-                                                {
-                                                    node.languages.nodes.map(({ id, name }) => (
-                                                        <span key={id}>
-                                                            {name}
-                                                        </span>
-                                                    ))
-                                                }
-                                            </Languages>
-                                        </Stats>
-                                    </TitleWrap>
-                                </Card>
+                            <Card>
+                                <Content>
+                                    <h4>{node.name}</h4>
+                                    <p>{node.description}</p>
+                                </Content>
+                                <TitleWrap>
+                                    <Stats>
+                                        <div>
+                                            <Star color={"#fff"} />
+                                            <span>{node.stargazers.totalCount}</span>
+                                        </div>
+                                        <div>
+                                            <Fork color={"#fff"} />
+                                            <span>{node.forkCount}</span>
+                                        </div>
+                                    </Stats>
+                                    <Stats>
+                                        <Languages>
+                                            {
+                                                node.languages.nodes.map(({ id, name }) => (
+                                                    <span key={id}>
+                                                        {name}
+                                                    </span>
+                                                ))
+                                            }
+                                        </Languages>
+                                    </Stats>
+                                </TitleWrap>
+                            </Card>
                         </AwesomeButton>
-                    )) : "Loading"
+                    ))
                 }
-            </Grid>
+                </Grid> : <LoadingScreen title="Loading GitHub repositories..."/>
+            }
+
         </div>
     );
 }

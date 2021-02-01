@@ -1,0 +1,53 @@
+.loading {
+    /* Variables */
+    --loader-size: 12em;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width : fit-content;
+    margin: auto;
+    height: calc(var(--loader-size) + 6em);
+
+}
+
+.loading>div  {
+    margin: auto;
+    margin-top: 0;
+    height: var(--loader-size);
+    width: var(--loader-size);
+}
+
+.loading h2{
+    text-align: center;
+}
+
+/* Animation */
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading__ring {
+    position: absolute;
+    width: var(--loader-size);
+    height: var(--loader-size);
+}
+
+.loading__ring:first-child {
+    transform: skew(30deg, 20deg);
+}
+
+.loading__ring:last-child {
+    transform: skew(-30deg, -20deg) scale(-1, 1);
+}
+
+.loading__ring:last-child svg {
+    animation-delay: -0.5s;
+}
+
+.loading__ring svg {
+    animation: rotate 1s linear infinite;
+    fill: #ea4f4c;
+}

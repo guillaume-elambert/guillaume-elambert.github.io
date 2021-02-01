@@ -27,5 +27,5 @@ module.exports = {
         phone: '+33769674626',
     },
     foundingDate: '2020',
-    githubToken : 'GITHUB TOKEN',
+    githubToken : 'BASE 64 ENCODED GITHUB TOKEN',
 };

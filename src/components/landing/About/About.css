@@ -1,0 +1,18 @@
+#toggleFileScreenBtn {
+    position: absolute;
+    top: 4.5px;
+    right: 10px;
+    font-size: 80%;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.CodeMirror {
+    height: auto;
+}
+
+.CodeMirror-scroll {
+    margin-bottom: -50px;
+    margin-right: -50px;
+    padding-bottom: 50px;
+}
