@@ -5,14 +5,13 @@ import { Grid, Content, Stats, Languages } from './styles';
 import { Card, TitleWrap } from '../../common';
 import Star from '../../common/Icons/Star';
 import Fork from '../../common/Icons/Fork';
-import { githubToken } from '../../../data/config';
 
 import { AwesomeButton } from "react-awesome-button";
 import LoadingScreen from '../../common/LoadingScreen/LoadingScreen';
 
 
 export function Projects() {
-
+    
     const [edges, setEdges] = useState(undefined);
 
     async function graphQLQuery() {
@@ -47,7 +46,7 @@ export function Projects() {
 
             const graphQLClient = new GraphQLClient(endpoint, {
                 headers: {
-                    authorization: "Bearer " + atob(githubToken),
+                    authorization: `Bearer ${atob(process.env.REACT_APP_GITHUB_TOKEN)}`,
                 },
             });
 
@@ -65,7 +64,7 @@ export function Projects() {
 
     return (
 
-        <div id="projects" className="section mt-5">
+        <div id="projects" className="section">
             <h2 className="mb-5 font-weight-bolder title">Projects</h2>
 
             {

@@ -26,6 +26,10 @@ export const Button = styled.button`
   ${({ secondary }) =>
     secondary &&
     `
-		background: #001F3F;
+    background: #2c2c2c;
+    
+      &:hover{
+        background: #202020;
+      }
 	`}
 `;

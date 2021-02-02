@@ -26,6 +26,5 @@ module.exports = {
         email: 'guillaume.elambert@yahoo.fr',
         phone: '+33769674626',
     },
-    foundingDate: '2020',
-    githubToken : 'BASE 64 ENCODED GITHUB TOKEN',
+    foundingDate: '2021',
 };
