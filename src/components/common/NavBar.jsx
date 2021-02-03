@@ -9,9 +9,9 @@ export const NavBar = (props) => (
         <Navbar.Collapse id="navbar-toggle">
           <Nav className="ml-auto lead">
               {
-                props.links ? props.links.map((link) => (
-                    <Nav.Link as={AnchorLink} href={link.href}>{link.text}</Nav.Link>
-                )) : "" 
+                props.links ? props.links.map((link, id) => {
+                    return(<Nav.Link key={id} as={AnchorLink} href={link.href}>{link.text}</Nav.Link>)
+                }) : "" 
               }
           </Nav>
         </Navbar.Collapse>

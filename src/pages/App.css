@@ -52,8 +52,26 @@
   text-decoration: none !important;
 }
 
+#loadMore .aws-btn {
+  --button-primary-color: #cc0000 !important;
+  --button-primary-color-dark: #860000 !important;
+  --button-primary-color-light: #ffffff !important;
+  --button-primary-color-hover: #af0000 !important;
+  --button-primary-color-active: #880000 !important;
+  --button-raise-level: 6px !important;
+}
+
+#loadMore {
+  width: fit-content;
+}
+
+#loadMore .aws-btn__content {
+  padding: 0 3em !important;
+}
+
 .projectTiles .aws-btn__content>span {
   width: 100% !important;
+  height: 100% !important;
 }
 
 .title {
