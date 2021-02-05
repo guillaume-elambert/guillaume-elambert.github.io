@@ -1,0 +1,14 @@
+[
+    {
+        "id": 0,
+        "name": "Github",
+        "link": "https://github.com/guillaume-elambert",
+        "icon": "/icons/github.svg"
+    },
+    {
+        "id": 1,
+        "name": "Linkedin",
+        "link": "https://linkedin.com/in/guillaume-elambert/",
+        "icon": "/icons/linkedin.svg"
+    }
+]

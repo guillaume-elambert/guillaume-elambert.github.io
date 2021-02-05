@@ -42,6 +42,10 @@
   font-size: 1.75rem !important;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 .projectTiles {
   --button-primary-color: #2c2c2c !important;
   --button-primary-color-dark: #181818 !important;

@@ -18,7 +18,7 @@ export function Hero(props) {
                             </h1>
                         }
 
-                        <Image className="heroIcon my-auto" src={wavingHand}></Image>
+                        <Image className="heroIcon my-auto" src={wavingHand} alt="Waving hand emoji"></Image>
                     </div>
                     {props.subTitle && <h3 className="display-4 font-weight-light mb-4">{props.subTitle}</h3>}
                     {props.text && <h3 className="font-weight-light">{props.text}</h3>}

@@ -6,7 +6,7 @@ import 'codemirror/mode/clike/clike';
 
 import { AboutTextJava, AboutTextTxt } from './AboutText';
 
-import { IOSScreen } from '../../common';
+import { Screen } from '../../common';
 
 import './About.css';
 
@@ -60,7 +60,7 @@ export const About = (props) => {
         <div id="about" className="section">
             <h2 className="mb-5 font-weight-bolder title">About</h2>
 
-            <IOSScreen screenTitle={title} content={content} />
+            <Screen screenTitle={title} content={content} />
         </div>
     );
 }

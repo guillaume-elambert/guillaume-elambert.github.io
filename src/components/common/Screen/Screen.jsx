@@ -1,7 +1,7 @@
 import React from 'react';
-import './IOSScreen.css';
+import './Screen.css';
 
-export const IOSScreen = (props) => {
+export const Screen = (props) => {
 
     return (
         <div className="screen">
@@ -15,4 +15,4 @@ export const IOSScreen = (props) => {
 
 }
 
-export default IOSScreen;
+export default Screen;

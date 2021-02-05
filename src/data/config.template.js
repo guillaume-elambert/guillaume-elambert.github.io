@@ -8,9 +8,9 @@ module.exports = {
     socialLinks: {
         twitter: 'https://twitter.com/SchwiftyTracto',
         github: 'https://github.com/guillaume-elambert',
-        linkedin: 'https://www.linkedin.com/in/guillaume-elambert/',
-        instagram: 'https://www.instagram.com/guillaume.elambert/',
-        facebook: 'https://www.facebook.com/guillaume.elambert/',
+        linkedin: 'https://linkedin.com/in/guillaume-elambert/',
+        instagram: 'https://instagram.com/guillaume.elambert/',
+        facebook: 'https://facebook.com/guillaume.elambert/',
     },
     social: {
         facebook: 'appId',

@@ -62,11 +62,19 @@
     text-align: center;
     font-size: 85%;
     text-transform: uppercase;
-    font-family: MontSerrat,Tahoma,Arial,sans-serif;
+    font-family: MontSerrat, Tahoma, Arial, sans-serif;
     font-weight: 700;
     line-height: 30px;
     letter-spacing: .5px;
     color: #8a8a8a;
+}
+
+@media (max-width: 700px) {
+
+    .screen .screen-bar h2,
+    .screen .screen-bar h3 {
+        display: none;
+    }
 }
 
 .screen .screen-bar {
@@ -81,7 +89,7 @@
 
 .screen .screen-bar i,
 .screen .screen-bar i:after,
-.screen .screen-bar i:before{
+.screen .screen-bar i:before {
     height: 14px;
     width: 14px;
     display: inline-block;
@@ -111,6 +119,7 @@
     height: auto;
     max-height: 20%;
 }
+
 /*
 .screen .screen-content .CodeMirror-scroll {
     overflow: visible !important;
