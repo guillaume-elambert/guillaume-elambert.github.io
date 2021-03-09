@@ -1,5 +1,7 @@
 import React from 'react';
-import { Col, Jumbotron, Image } from 'react-bootstrap';
+import Col from 'react-bootstrap/Col';
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import Image from 'react-bootstrap/Image';
 
 import { Container } from './';
 import wavingHand from '../../assets/waving-hand-emoji.png';

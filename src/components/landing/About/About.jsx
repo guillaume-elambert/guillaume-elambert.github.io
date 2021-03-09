@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
 import CodeMirror from '@uiw/react-codemirror';
 import 'codemirror/theme/monokai.css';
 import 'codemirror/mode/clike/clike';

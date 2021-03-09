@@ -1,4 +1,5 @@
-import { Navbar, Nav } from 'react-bootstrap';
+import Navbar from 'react-bootstrap/NavBar';
+import Nav from 'react-bootstrap/Nav';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 export const NavBar = (props) => (

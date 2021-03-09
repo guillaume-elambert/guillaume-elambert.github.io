@@ -1,8 +1,8 @@
 module.exports = {
     defaultTitle: 'Guillaume ELAMBERT',
-    logo: 'https://guillaume-elambert.github.io/favicon.ico',
+    logo: 'https://elambert.guillau.me/favicon.ico',
     author: 'Guillaume ELAMBERT',
-    url: 'https://guillaume-elambert.github.io/',
+    url: 'https://elambert.guillau.me/',
     legalName: 'Guillaume ELAMBERT',
     defaultDescription: 'I’m Guillaume and I’m an engineering student',
     socialLinks: {
