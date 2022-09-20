@@ -27,7 +27,7 @@ export function Projects() {
             var query = gql`
             {
                 viewer {
-                    repositories(first: ${repos}, orderBy: { field: STARGAZERS, direction: DESC }) {
+                    repositories(first: ${repos}, privacy: PUBLIC, orderBy: { field: STARGAZERS, direction: DESC }) {
                         totalCount,
                         edges {
                             node {
