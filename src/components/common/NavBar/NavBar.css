@@ -1,0 +1,10 @@
+#brandImage {
+  max-height: 52px;
+  margin-right : 1rem;
+}
+
+@media screen and (max-width: 500px){
+    #brandImage {
+        display: none;
+    }
+}

@@ -6,4 +6,4 @@ export * from './SEO';
 export * from './Screen/Screen';
 export * from './Footer/Footer';
 export * from './Hero';
-export * from './NavBar';
+export * from './NavBar/NavBar';

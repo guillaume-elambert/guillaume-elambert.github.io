@@ -32,15 +32,25 @@ export const AboutTextJava =`public static void main(String[] args) {
         guillaume.getWork()
     };
     guillaume.setHobbies(hobbies);
-}`;
+}
+`;
 
 
 export const AboutTextTxt = `Hi,
 
-My name is Guillaume ELAMBERT I'm 20 years old and I have just become an engineering student
-in polytech Tours.
+My name is Guillaume ELAMBERT I am 22 years old and I am currently enrolled in an engineering degree at Polytech Tours.
 
-I graduated from a BTEC Higher National Diploma in Computer Science in 2020 and I decided 
-to deepen my knowledge by becoming an engineer.`;
+I graduated from a BTEC Higher National Diploma in Computer Science in 2020 and I decided to deepen my knowledge by becoming an engineer.
+
+During my engineering degree, I have done many projects (which you can find below), most of them in groups.
+These projects allowed me to acquire many skills and knowledge about computer science in general but also about team work and group cohesion.
+
+I'm passionate about what I do and I always try to improve so I'm open to any discussion, debate or tips on computer science (new technologies, ethics, good usages, ...).
+
+For my last year of studies, I would like to realize my project abroad, so please feel free to contact me !
+
+
+PS : I'm not the best at creating fronts, I hope it doesn't sting your eyes too much...
+`;
 
 export default AboutTextJava;
