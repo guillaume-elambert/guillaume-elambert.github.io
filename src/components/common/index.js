@@ -5,5 +5,5 @@ export * from './Input';
 export * from './SEO';
 export * from './Screen/Screen';
 export * from './Footer/Footer';
-export * from './Hero';
+export * from './Hero/Hero';
 export * from './NavBar/NavBar';

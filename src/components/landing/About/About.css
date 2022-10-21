@@ -16,3 +16,39 @@
     margin-right: -50px;
     padding-bottom: 50px;
 }
+
+.screen {
+    z-index: 0;
+}
+
+#imgContainer {
+    position: relative;
+    width: 100%;
+    height: 0;
+}
+
+#emojiFinger {
+    -webkit-transform: rotate(165deg) scaleX(-1);
+    transform: rotate(165deg) scaleX(-1);
+    width: 4rem;
+    position: absolute;
+    right: 4rem;
+    top: -3rem;
+    z-index: 1;
+
+    animation-name: pointing-finger;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pointing-finger {
+    0% {
+        transform: rotate(165deg) scaleX(-1);
+    }
+    50% {
+        transform: rotate(165deg) scaleX(-1) translateY(0.8rem);
+    }
+    100% {
+        transform: rotate(165deg) scaleX(-1);
+    }
+}

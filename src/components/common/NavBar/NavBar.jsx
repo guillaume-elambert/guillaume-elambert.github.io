@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Image from 'react-bootstrap/Image';
 
-import memojiSmile from '../../../assets/memoji-smile.png';
+import emojiSmile from '../../../assets/memoji-smile.png';
 import './NavBar.css';
 
 
@@ -11,7 +11,7 @@ export const NavBar = (props) => (
     <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
 
         <Navbar.Brand href="/" className="fs-3">
-          <Image id="brandImage" src={memojiSmile} alt="My memoji"></Image>
+          <Image id="brandImage" src={emojiSmile} alt="My memoji"></Image>
           Guillaume Elambert
         </Navbar.Brand>
 

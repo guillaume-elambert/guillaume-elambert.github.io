@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
+import { Image } from 'react-bootstrap';
 import CodeMirror from '@uiw/react-codemirror';
 import 'codemirror/theme/monokai.css';
 import 'codemirror/mode/clike/clike';
@@ -8,7 +9,9 @@ import { AboutTextJava, AboutTextTxt } from './AboutText';
 
 import { Screen } from '../../common';
 
+import emojiFinger from '../../../assets/pointing-finger.png';
 import './About.css';
+
 
 export const About = (props) => {
     const codeMirrorJava = {
@@ -38,7 +41,7 @@ export const About = (props) => {
     const title = <>
         <h2>{codeMirrorToUse.title}</h2>
         <Button variant="dark" id="toggleFileScreenBtn" onClick={() => toggleActiveCodeMirror()}>{codeMirrorToUse.btnTxt}</Button>
-    </>;
+    </>
 
     const content =
     <div id="codeMirrorJava">
@@ -59,8 +62,10 @@ export const About = (props) => {
     return (
         <div id="about" className="section">
             <h2 className="mb-5 font-weight-bolder title">About</h2>
-
-            <Screen screenTitle={title} content={content} />
+            <div id="imgContainer">
+                <Image id="emojiFinger" src={emojiFinger} onClick={() => toggleActiveCodeMirror()} alt="My memoji"></Image>
+            </div>
+            <Screen id="aboutScreen" screenTitle={title} content={content} />
         </div>
     );
 }
